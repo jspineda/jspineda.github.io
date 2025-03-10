@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+	min-width: 320px;
+	overflow-x:hidden;  /* doesn't seem to be doing anything */ 
+}
+
+
+#headerNav {position: fixed;
+	z-index:10000;
+	width:100%;
+	top: 0;
+	height:4em;
+	margin-bottom: 1em;
+	display: block;
+	background: rgba(255, 255, 255,1);
+	
+}
+
+#headerNav h2 {position: absolute;
+			left: 1em;
+			top: 0;
+			line-height: 1em;
+}
+
+
+#headerNav nav {position:absolute; 
+			right:1em;
+			top: 0;
+			} 
+
+
+
+@media (max-width: 1000px) {
+    #headerNav nav {
+        display: none;
+    }
+	
+	#research .flex {display:block}
+	#research .para {max-width: 100%}
+	#about .flex {display:block}
+}
+
+
+@media (max-width: 720px) {
+    #headerNav nav {
+        display: none;
+    }
+	}
+
+@media (max-width: 600px) {
+    #email {
+        display: none;
+    }
+}
+
+
+
+#headerNav nav ul li { vertical-align: baseline;
+					display:inline-block; 
+				    margin-left:0.75em; 
+					margin-right:0.75em; 
+
+}
+
+#headerNav nav ul li a {display:inline-block;
+					 font:inherit;
+					 color: inherit;
+					 text-decoration:none;
+					 margin: 0;
+				 	 font-size:1.25em;
+}
+
+
+
+
+/* Sections */
+
+#intro {margin-top:4em;
+		margin-bottom: 0px;
+		/*align-items: center;*/
+		text-align: center;
+		/*z-index: -1;*/
+		background:url("assets/images/SDO_HMIIC.png");  /* replace image */
+		min-height: 100vh;
+		/*height: 100vh;*/
+		background-position: top,left,bottom,center;
+		/*background-position: 50%,50%; */
+		background-attachment: fixed,fixed;
+		background-size: cover;
+		background-repeat: no-repeat,no-repeat;}
+
+#intro h1 {/*padding-top:3em;*/
+			font-size:3em;
+			margin-top: 0px}
+/*
+#intro p { margin-left:25%;
+			margin-right:25%;
+			/*max-width: 656px;*/
+/*min-width:350px} */ 
+
+
+.animate {transition: opacity 2s ease-in-out}
+
+.animate.is-resizing {transition:none}
+
+
+
+#research { line-height: 2em;
+		margin-top:0px;
+		margin-bottom: 0px;
+		/*display: flex;*/
+		text-align: center;
+		background:url("assets/images/ActDiag_backaground.png");
+		min-height: 100vh;
+		/*height: 20em;*/
+		background-position: top,left,bottom,center;
+		background-attachment: fixed,fixed;
+		background-size: cover;
+		background-repeat: no-repeat,no-repeat;
+		padding: 2em;
+}
+
+
+#research p {max-width: 48%;}
+
+#research h2 {width:100%;
+				margin-bottom: 0px;
+				font-size: 2em;}
+
+#research .block {padding: 1em}
+
+
+#about { margin-top:0px;
+		margin-bottom: 0px;
+		text-align: center;
+		background:url("assets/images/chile_lasarena_crop.jpg");
+		min-height: 100%;
+		background-position: top,left,bottom,center;
+		background-attachment: fixed,fixed;
+		background-size: cover;
+		background-repeat: no-repeat,no-repeat;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2em;
+}
+
+#about h2 {font-size:2em}
+
+#contact {text-align: center;
+		  /*height: 20em;*/
+			background:url("assets/images/chile_lasarena_crop.jpg");
+			min-height: 100%;
+			background-position: top,left,bottom,center;
+			background-attachment: fixed,fixed;
+			background-size: cover;
+			background-repeat: no-repeat,no-repeat;
+			display:flex;
+			align-items: center;
+			justify-content: center;
+			padding: 2em;
+}
+
+
+#contact h2 {font-size:2em}
+
+#contact .block {max-width: 732px;
+				/*position: fixed;*/
+				display: inline-block;
+				margin-top: 0px;
+				padding:1em}
+
+#contact .para {padding: 1em}
+
+
+#about .block {max-width: 850px;
+				/*position: fixed;*/
+				display: inline-block;
+				margin-top: 0px;
+				padding:1em}
+
+#about .para {padding: 1em;
+   			line-height: 2em;}
+
+
+
+#footer {padding: 1em;
+		text-align: left;
+		background-color:rgb(255,255,255,1) ;
+		color:#333;
+		display:flex}
+
+#footer p {width: 50%;}
+
+#footer a {color:inherit;
+		text-decoration: none;
+		font-style: italic;
+		margin:0;
+		padding: 0}
+
+#coolstars {aspect-ratio: 245/220;}
+
+#headshot {aspect-ratio: 340/510;}
+
+
+.credit {position:absolute;
+		right:2em;
+		text-align:right;
+		margin-top: -0.5em;
+		line-height: 2em;
+		padding-bottom: 1em;}
+
+
+#email {text-align:left;
+		left:2em;}
+
+
+.content { display:grid;
+			margin-left:0px;
+	   		margin-right:0px;
+			margin-top:4em;
+			margin-bottom:0px;
+			opacity: 1;
+			line-height: 3em;
+			justify-content: center;
+			align-content: center;
+			min-height: 100vh;
+			background-color: rgba(0,0, 0, 0);
+			transition: background-color  3s ease-in-out;
+}
+
+.container {max-height: 300px;
+			/*margin-top: 4em;*/
+			/*position: relative; */}
+
+
+.scimg {min-height:286px ;
+		min-width:318px;
+		max-height: 100%;
+		max-width: 40%;
+		/*display:flex;*/
+		padding:2em;
+		z-index: inherit;}
+
+
+.profimg {min-height:512px ;
+		min-width:341px ;
+		max-height: 100%;
+		max-width: 35%;
+		/*display:flex;*/
+		padding:2em;
+		z-index: inherit;}
+
+
+
+.plink {text-decoration:none;
+		font-style: italic;
+		color:#3B6EB4;
+		}
+
+.dark {color:white}
+
+.subhead {margin-top:0px;}
+
+.para {margin-bottom: 0px;
+		font-weight: bold;
+		letter-spacing: 0.75px}
+
+.block {margin-top:0px;
+		margin-left:4em;
+		margin-right:4em;
+		margin-bottom: 0px;
+		background-color: rgba(240,240,240,0.8);
+		position: relative;
+		/*top:2em;*/}
+
+.bgcontain {background-color: rgba(0,0,0,1);
+			min-height: 300px}
+
+.flex {display:flex;
+		align-items: center}
+
+
+
+/* -- below here for projects classes */
+
+
+.proj {min-height: 100vh;
+		/*height: 100vh;*/
+		background-position: top,left,bottom,center;
+		/*background-position: 50%,50%; */
+		background-attachment: fixed,fixed;
+		background-size: cover;}
+
+
+.spi {background-image: url("assets/images/SPI_AliceKitterman.jpg");
+	}
+
+.transition {background-image:url("assets/images/ActDiag_backaground.png");
+	}
+
+.fumes {background-image:url("assets/images/FUMES-logo_rot.png");
+	}
+
+.aurora {background-image: url("assets/images/BrownDwarf_small.png")}
+
+
+#overview .block {padding:1em;
+				margin-top: 4em;
+				margin-bottom:4em;
+				text-align: center;
+				max-width:750px}
+
+#overview ul {text-align: left} 
+

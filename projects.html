@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en" id="top">
+	<head>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+		<title>Research - JSP</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	
+	<body>
+        <header id="headerNav">
+			<h2>J. Sebastian Pineda</h2>
+			<nav>
+				<ul>
+					<li> <a href="home.html">Greetings</a>  </li>
+					<li> <a href="#top" >Research</a>   </li>
+					<li> <a href="home.html#about" >About</a>      </li>
+					<li> <a href="home.html#contact" >Contact</a>    </li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="bgcontain">
+			<section id="overview" class= "transition proj">
+				<div class="content">
+					<div class="block">
+							<h1>Research Program</h1>
+							<p class="para"> 
+								I work at the intersection of stellar astrophysics and exoplanetary science investigating the different ways that magnetic fields influence observable phenomnena in astronomy. <br><br>
+						
+								For insight into some of my current research activities please have a look below. You can also find an up to date list of publications <a href="https://ui.adsabs.harvard.edu/user/libraries/vrFzHI36Qn6KoB-WImROIQ" class='plink'>here</a>.	<br><br>
+
+								Current research programs: </p>
+								
+						
+								<ul>
+									<li><a href="#first" class="plink">Star-planet interactions</a></li>
+									<li><a href="#second" class="plink">Far Ultraviolet M-dwarf Evolution Survey (FUMES)</a></li>
+									<li><a href="#third" class="plink"> Brown dwarf aurorae</a></li>
+									<li><a href="#fourth" class="plink">Simulations of (sub)stellar environments</a></li>
+								</ul>
+							
+							<p class="para">
+								Current and past graduate student mentees include Dr. Girish Duvvuri and Anna Zuckerman.
+							</p>	
+					</div>
+				</div>
+			</section>
+
+			
+		</div>
+		
+		<div class="bgcontain">
+			<section id="first" class="spi proj">
+			</section>
+		</div>
+		
+		<div class="bgcontain">
+			<section id="second" class="fumes proj">
+			</section>
+		</div>
+		
+		<div class="bgcontain">
+			<section id="third" class="aurora proj">
+			</section>
+		</div>
+
+		<div class="bgcontain">
+			<section id="fourth" class="simu proj">
+			</section>
+		</div>
+
+		
+		<div id="footer">
+				<p id="email" class="credit">sebastian.pineda [at] lasp.colorado.edu <br>
+					
+						</p>
+
+				<p class="credit">
+					© John Sebastian Pineda 2025			
+				</p>
+				<!-- <p class="credit2">Image Credits: Adapted from NASA</p> -->
+		</div>
+
+		
+		<script>
+			
+			document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default jump behavior
+                const targetId = this.getAttribute('href').substring(1); // Extract ID
+                const targetElement = document.getElementById(targetId);
+                const offset = 50; // Desired offset in pixels
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth' // Smooth scroll
+                });
+            	});
+				});
+			
+		</script>
+
+	</body>
+
+
+</html>

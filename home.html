@@ -1,0 +1,177 @@
+    <!DOCTYPE html>
+    <html lang="en"  id="top">
+		
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. Sebastian Pineda</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Replace with your CSS file path -->
+	</head>
+	
+	<body>
+        <header id="headerNav">
+ 	 		
+			<h2>J. Sebastian Pineda</h2>
+			<nav>
+				<ul>
+					<li> <a href="#top" class="scroll-link">Greetings</a>  </li>
+					<li> <a href="#research" class="scroll-link">Research</a>   </li>
+					<li> <a href="#about" class="scroll-link">About</a>      </li>
+					<li> <a href="#contact" class="scroll-link">Contact</a>    </li>
+				</ul>
+			</nav>
+		</header>
+
+		<div class="bgcontain">
+			<section id="intro" class="animate">
+
+				<div class="content dark">
+					<div class="container">
+							<h1>Greetings!</h1>
+							<p class="para"> I am an astrophysicist at the Laboratory for Atmospheric and Space Physics, University of Colorado, Boulder. <br> I study the interactions between small stars and their exoplanets.</p>	
+					</div>
+				</div>
+			</section>
+		</div>
+			
+		
+		<div class="bgcontain">
+			<section id="research">
+				<div class="block">       
+					<h2 class="subhead">Research</h2>
+					
+					<div class="flex"> 
+						<p class="para">Magnetic fields transform stars from relatively stable hydrogen spheres into dynamic and eruptive objects dramatically changing the enviornments of exoplanetary systems. It is by understanding the fundamental physics of how this stellar activity behaves and evolves that we develop the environmental context necessary to assess which exoplanets could hold the potential to develop life. <br><br>
+						
+						I am working on a variety of projects in low-mass stellar and substellar magnetism, brown dwarf atmospheric science, and star-planet interactions. Please contact me if you are interested, see below.
+							
+							
+							<!-- Check out my <a href="projects.html" class="plink"> projects</a> page, if you are interested in learning more about those research initiatives. -->
+							
+						
+						</p>
+																	
+						<!-- 2447 × 2193 -->
+						<img src="assets/images/20240627_100318.jpg" id="coolstars" class="scimg" alt="Speaker in front of presentation slides"/>
+
+					</div>
+				</div>
+   			 </section>
+		</div>
+		
+			<!-- Image credit: photo by J. Sebastian Pineda -- Chile -->
+    		<div class="bgcontain">
+				<section id="about">		
+					<div class="block"> 
+						<h2 class="subhead">About Me</h2>
+						
+						<div class="flex">
+						<p class="para"> There is an incredible beauty in being able to observe the universe, understand how it works, and describe it through a mathematical language. I feel privileged to work as an astronomer and play in this arena, solving puzzles at the boundaries of human knowledge. <br><br>
+							
+						I was born in Colombia, but mostly grew up in the U.S., with my extended family. The path to becoming a scientist isn't always straightforward, but with the right support anyone can pursue that passion. I will always be grateful to those that have helped me along this path throughout the years --- thank you. It is our professional duty to foster the growth of young scientists, and mentoring students has for me been the most rewarding part of my work. 					
+						
+						</p>
+						
+						<!-- 3415 × 5123 -->
+						<img src="assets/images/Headshotsmall2.jpg" id="headshot" class="profimg" alt="Picture of Dr. J. Sebastian Pineda"/>
+
+						</div>
+					</div>
+
+				</section>
+			</div>
+
+	    <div class="bgcontain">
+			<section id="contact">
+				<div class="block">
+				  <h2 class="subhead">Contact</h2>
+				  <p class="para">
+					sebastian.pineda [at] lasp.colorado.edu <br> <br>
+
+						University of Colorado Boulder <br> 
+					    Laboratory for Atmospheric and Space Physics <br>
+
+						3665 Discovery Dr. <br>
+
+						Boulder CO, 80303 <br> <br>
+
+						LASP Space Science Center (SPSC)
+					</p>
+				</div>
+			</section>
+		</div>
+  
+			
+			<div id="footer">
+				<p id="email" class="credit">sebastian.pineda [at] lasp.colorado.edu <br>
+					
+					© John Sebastian Pineda 2025				</p>
+
+
+				
+				<p class="credit">
+					Inspiration:<a href="https://html5up.net/"> HTML5 Up</a> <br>
+					Image Credits: Adapted from NASA
+				</p>
+				<!-- <p class="credit2">Image Credits: Adapted from NASA</p> -->
+			</div>
+	
+		<!-- Scripts -->
+		<script src="assets/js/cycle.js"></script> 
+		<!-- <script>
+        function setInitialBackgroundSize() {
+            const bgElement = document.querySelector('.bgcontain');
+            //const width = window.innerWidth; // Initial window width
+            const height = window.innerHeight; // Initial window height
+            //bgElement.style.width = `${width}px`;
+            bgElement.style.height = `${height}px`;
+        }
+
+        // Set the background size on page load
+        window.addEventListener('load', setInitialBackgroundSize);
+		</script>  -->
+		<script>
+			document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Prevent default jump behavior
+                const targetId = this.getAttribute('href').substring(1); // Extract ID
+                const targetElement = document.getElementById(targetId);
+                const offset = 50; // Desired offset in pixels
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth' // Smooth scroll
+                });
+            	});
+				});
+			
+			window.addEventListener('load', function () {
+					 // Check if there's a hash in the U5
+					 if (window.location.hash) {
+						 const targetId = window.location.hash.substring(1); // Get the ID without the #
+						 const targetElement = document.getElementById(targetId);
+						 const offset = 50; // Adjust this value to set the offset
+
+						 if (targetElement) {
+							 const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+							 const offsetPosition = elementPosition - offset;
+
+							 // Scroll to the offset position
+							 window.scrollTo({
+								 top: offsetPosition,
+								 behavior: 'smooth' // Smooth scrolling
+							 });
+						 	}
+					 	}
+						});
+
+    </script>
+		
+		
+		
+		</body>
+
+		  
+</html>
